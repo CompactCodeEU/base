@@ -1,0 +1,206 @@
+/*
+ * Copyright (c) 2019
+ * Copyright Holder : CompactCode - CompactCode BvBa - Belgium
+ * Copyright : Unless granted permission from CompactCode BvBa.
+ * You can not distribute, reuse, edit, resell or sell this.
+ */
+
+@cc-color: #ff6961;
+
+@import '_animations.less';
+@import '_dropzone.less';
+
+@cc-base-icons-admin__font-name-path: '@{baseDir}CompactCode_Base/fonts/CompactCode/icomoon';
+@cc-base-icons-admin__font-name: 'icomoon';
+
+
+.lib-font-face(
+  @family-name: @cc-base-icons-admin__font-name,
+  @font-path: @cc-base-icons-admin__font-name-path,
+  @font-weight: normal,
+  @font-style: normal
+);
+
+.admin__menu .item-base.parent.level-0 > a:before {
+  font-family: @cc-base-icons-admin__font-name;
+  content: "\e903";
+  font-size: 3rem;
+  display: inline-table;
+}
+
+#cc-loading-container {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 10px;
+  .cc-preview {
+    display: flex;
+    flex: 0 0 auto;
+    width: 80px;
+    height: 80px;
+    outline: 5px solid #f8f8f8;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+  }
+  select.cc-preview-selector {
+    display: flex;
+    flex: 0 0 80%;
+    /* display: flex; */
+    /* vertical-align: middle; */
+    /* align-self: center; */
+  }
+}
+
+.compactcontainer{
+  display: flex;
+  align-items: center;
+  .compactcomment{
+    &.cc-logo {
+      display: flex;
+      flex: 0 0 10%;
+      justify-content: center;
+    }
+    &.icon{
+      display: flex;
+      flex: 0 0 10%;
+      &:before{
+        font-size: 3rem;
+        content: '\e61a';
+        font-family: 'Admin Icons';
+      }
+    }
+    &.infoicon{
+      display: flex;
+      flex: 0 0 10%;
+      &:before{
+        font-size: 3rem;
+        content: '\e61a';
+        font-family: 'Admin Icons';
+      }
+    }
+    &.comment{
+      display: flex;
+      flex: 0 0 90%;
+      flex-flow: row wrap;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+.cc_ui_element_leftmargin{
+  margin-left: calc( (100%) * 0.24 + 30px);
+}
+
+//Multiselect
+.cc-multiselect{
+  .cc-multiselect-action{
+    padding: 5px 5px 5px 0;
+    display: inline-block;
+    a{
+      color: #555555;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+  .ms-container{
+    background: transparent url('@{baseDir}CompactCode_Base/images/switch.png') no-repeat 50% 50%;
+    width: 100%;
+    &:after{
+      content: ".";
+      display: block;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      clear: both;
+      min-height: 0;
+      visibility: hidden;
+    }
+    .ms-selectable, .ms-selection{
+      background: #fff;
+      color: #555555;
+      float: left;
+      width: 45%;
+      li{
+        &.ms-elem-selectable, .ms-elem-selection{
+          border-bottom: 1px #eee solid;
+          padding: 2px 10px;
+          color: #555;
+          font-size: 14px;
+        }
+        &.ms-hover{
+          cursor: pointer;
+          color: #fff;
+          text-decoration: none;
+          background-color: @cc-color;
+        }
+        &.disabled{
+          background-color: #eee;
+          color: #aaa;
+          cursor: text;
+        }
+      }
+    }
+    .ms-selection{
+      float: right;
+    }
+    .ms-list{
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -ms-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+      transition: border linear 0.2s, box-shadow linear 0.2s;
+      border: 1px solid #ccc;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      position: relative;
+      height: 200px;
+      padding: 0;
+      overflow-y: auto;
+      &.ms-focus{
+        border-color: rgba(255, 105, 97, 0.8);
+      }
+    }
+    ul{
+      margin: 0;
+      list-style-type: none;
+      padding: 0;
+    }
+    .ms-optgroup-container{
+      width: 100%;
+    }
+    .ms-optgroup-label{
+      margin: 0;
+      padding: 5px 0px 0px 5px;
+      cursor: pointer;
+      color: #999;
+    }
+  }
+}
+
+.cc-table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  th{
+    padding: 5px;
+    background-color: @cc-color;
+    color: white;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+  td{
+    padding: 5px;
+  }
+}
+
+.colorpicker{
+  z-index: 999;
+}

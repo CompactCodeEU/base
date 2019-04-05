@@ -1,0 +1,17 @@
+<!--
+  ~ Copyright (c) 2019
+  ~ Copyright Holder : CompactCode - CompactCode BvBa - Belgium
+  ~ Copyright : Unless granted permission from CompactCode BvBa.
+  ~ You can not distribute, reuse, edit, resell or sell this.
+  -->
+
+<div class="admin__field">
+    <label class="admin__field-label">
+        <!-- ko if: options.cclabel -->
+        <span><!-- ko text:options.cclabel --><!--/ko--></span>
+        <!-- /ko -->
+    </label>
+    <div class="admin__field-control">
+        <render args="elementTmpl" if="visible"/>
+    </div>
+</div>

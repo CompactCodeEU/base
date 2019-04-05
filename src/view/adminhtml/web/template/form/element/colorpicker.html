@@ -1,0 +1,21 @@
+<!--
+  ~ Copyright (c) 2019
+  ~ Copyright Holder : CompactCode - CompactCode BvBa - Belgium
+  ~ Copyright : Unless granted permission from CompactCode BvBa.
+  ~ You can not distribute, reuse, edit, resell or sell this.
+  -->
+
+<input class="admin__control-text" type="text"
+       data-bind="
+        event: {change: userChanges},
+        value: value,
+        hasFocus: focused,
+        valueUpdate: valueUpdate,
+        afterRender: initColorPickerCallback,
+        attr: {
+            name: inputName,
+            placeholder: placeholder,
+            'aria-describedby': noticeId,
+            id: uid,
+            disabled: disabled
+    }"/>
