@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ Copyright (c) 2019
+  ~ Copyright Holder : CompactCode - CompactCode BvBa - Belgium
+  ~ Copyright : Unless granted permission from CompactCode BvBa.
+  ~ You can not distribute, reuse, edit, resell or sell this.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="CompactCode_Base::base" title="CompactCode">
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<!--
+  ~ Copyright (c) 2019
+  ~ Copyright Holder : CompactCode - CompactCode BvBa - Belgium
+  ~ Copyright : Unless granted permission from CompactCode BvBa.
+  ~ You can not distribute, reuse, edit, resell or sell this.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="compactcode_tab" translate="label" sortOrder="111">
+            <label>CompactCode</label>
+        </tab>
+    </system>
+</config>

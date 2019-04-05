@@ -1,0 +1,48 @@
+<!--
+  ~ Copyright (c) 2019
+  ~ Copyright Holder : CompactCode - CompactCode BvBa - Belgium
+  ~ Copyright : Unless granted permission from CompactCode BvBa.
+  ~ You can not distribute, reuse, edit, resell or sell this.
+  -->
+
+<div class="cc-multiselect" data-bind="mageInit: {'cc-multiselect':{ 'multiselectclass' : 'cc-multiselect' , 'selectall' : multiselectoptions.selectall.id, 'deselectall' : multiselectoptions.deselectall.id, 'selectableOptgroup' :  multiselectoptions.selectableOptgroup}}">
+    <!-- ko if: multiselectoptions.selectall.enabled -->
+    <div class="cc-multiselect-action select-all">
+        <a href='#' data-bind="attr: {id: multiselectoptions.selectall.id}">
+            <!-- ko text:multiselectoptions.selectall.text --><!--/ko-->
+        </a>
+    </div>
+    <!--/ko-->
+    <!-- ko if: multiselectoptions.deselectall.enabled -->
+    <div class="cc-multiselect-action deselect-all">
+        <a href='#' data-bind="attr: {id: multiselectoptions.deselectall.id}">
+            <!-- ko text:multiselectoptions.deselectall.text --><!--/ko-->
+        </a>
+    </div>
+    <!--/ko-->
+    <select multiple="multiple" class="admin__control-multiselect cc-multiselect" data-bind="
+attr: {
+        name: inputName,
+        id: uid,
+        size: size ? size : '6',
+        disabled: disabled,
+        'aria-describedby': noticeId,
+        placeholder: placeholder,
+},
+foreach: options"
+    >
+        <!-- ko if: $parent.multiselectoptions.optgroup -->
+        <optgroup data-bind="attr: {label: config.label}, foreach: suboptions">
+            <option data-bind="attr: {value: value}">
+                <!-- ko text:label --><!--/ko-->
+            </option>
+        </optgroup>
+        <!--/ko-->
+
+        <!-- ko if: !$parent.multiselectoptions.optgroup -->
+        <option data-bind="attr: {value: value}">
+            <!-- ko text:label --><!--/ko-->
+        </option>
+        <!--/ko-->
+    </select>
+</div>
